@@ -27,13 +27,13 @@ namespace HigherLowerGame {
             return GameGuess;
         }
 
-        public int SetNewGuessRange(string userResponse)
+        public void SetNewGuessRange(string userResponse)
         {
             if (userResponse == "higher")
             {
                 GuessRangeLow = GameGuess + 1;
             }
-            else if (userResponse == "lower")
+            else
             {
                 GuessRangeHigh = GameGuess - 1;
             }

@@ -24,7 +24,7 @@ namespace HigherLowerGame {
             Console.WriteLine("Is your number higher or lower than " + gameGuess + "? (higher/lower/correct)");
             string userResponse = Console.ReadLine();
 
-            if (userResponse == "higher" || userResponse == "lower" )
+            while (userResponse == "higher" || userResponse == "lower" )
             {
                 newGame.SetNewGuessRange(userResponse);
                 gameGuess = newGame.FindNextGuessRange();
@@ -32,10 +32,7 @@ namespace HigherLowerGame {
                 Console.WriteLine("Is your number higher or lower than " + gameGuess + "? (higher/lower/correct)");
                 userResponse = Console.ReadLine();
             }
-            else
-            {
-                Console.WriteLine("I win!");
-            }
+            Console.WriteLine("I win!");
         }
     }
 }
